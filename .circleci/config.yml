@@ -17,7 +17,8 @@ jobs:
       - attach_workspace:
           at: ./target
       - run: |
-            chmod +x mvnw && ./mvnw \
+            chmod +x mvnw \
+            ./mvnw \
             -Dtest=$(for file in $(circleci tests glob "src/test/**/**.java" \
             | circleci tests split --split-by=timings); \
             do basename $file \
