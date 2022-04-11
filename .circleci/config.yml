@@ -18,7 +18,7 @@ jobs:
           at: ./target
       - run: |
             chmod +x mvnw \
-            ./mvnw \
+            | ./mvnw \
             -Dtest=$(for file in $(circleci tests glob "src/test/**/**.java" \
             | circleci tests split --split-by=timings); \
             do basename $file \
