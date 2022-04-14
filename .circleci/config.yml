@@ -57,9 +57,7 @@ workflows:
 
   build-then-test:
     jobs:
-      - build:
-          context: 
-            - fleet_webapp
+      - build
       - test:
           requires:
             - build
